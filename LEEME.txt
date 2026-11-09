@@ -1,25 +1,21 @@
-EMANUEL GESTIÓN — Primera versión funcional
+EMANUEL GESTIÓN 2.0
 
-QUÉ INCLUYE
-- Panel de control con stock, caja, ingresos y alertas.
-- Inventario de autos y motos con alta, edición y eliminación.
-- Registro de compras, ventas, permutas y movimientos relacionados.
-- Caja separada: Negocio, Personal y Reserva.
-- Contactos y seguimiento de clientes.
-- Comparables de mercado cargados manualmente, con zona, fecha y enlace.
-- Calculadora de compra y permuta.
-- Checklist de inspección previa.
-- Ajustes del negocio y respaldo/restauración JSON.
-- Diseño adaptable a celular y computadora, con soporte PWA/offline básico.
+Incluye:
+- Panel general y semáforo orientativo de salud del negocio.
+- Inventario de vehículos, edición, costos de reparación e historial.
+- Registro de compras, ventas y permutas.
+- Finanzas con cajas Negocio, Personal y Reserva; transferencias internas separadas.
+- Cuotas por cobrar y pagar con vencimientos y registro de cobro/pago.
+- Clientes, vendedores, seguimiento y oportunidades.
+- Referencias de mercado y guardado de enlaces de anuncios.
+- Calculadoras de compra, permuta, margen y estrategia de negociación.
+- Checklist de inspección y generador de publicaciones.
+- Informes, impresión/guardar PDF, exportación JSON y CSV.
+- PWA instalable y modo offline básico.
 
-IMPORTANTE
-- Esta versión guarda datos localmente en el navegador del dispositivo.
-- No sincroniza automáticamente iPhone y PC. Exportá un respaldo y guardalo en un lugar seguro.
-- Para instalar como PWA en iPhone/PC, publicá estos archivos en un hosting HTTPS. En iPhone abrí el sitio con Safari > Compartir > Añadir a pantalla de inicio.
-- Para PC, usá el menú de instalación del navegador compatible.
-- No incluye acceso automático a Facebook Marketplace/Mercado Libre ni precios oficiales en vivo.
-- Los cálculos dependen de los datos cargados. No representan asesoramiento legal, mecánico ni garantía de rentabilidad.
-- La app no mueve dinero ni ejecuta operaciones sin tu autorización.
-
-PUBLICACIÓN GRATUITA
-Podés alojar una web estática en un servicio gratuito como GitHub Pages. Requiere crear una cuenta y publicar los archivos. Los planes y límites del hosting pueden cambiar.
+IMPORTANTE:
+- Conserva los datos V1 usando la misma clave de almacenamiento local, pero exportá un respaldo antes de actualizar.
+- Los datos se guardan localmente en cada navegador/dispositivo; no hay sincronización automática iPhone-PC.
+- No consulta automáticamente Marketplace/Mercado Libre ni precios privados. Cargá fuentes, enlaces y fechas.
+- No realiza pagos, compras, ventas, transferencias bancarias ni firma contratos.
+- La rentabilidad y el semáforo son estimaciones basadas en los datos cargados.
