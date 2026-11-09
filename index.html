@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10243a"><meta name="description" content="Gestión de compra y venta de vehículos">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+<title>EMANUEL GESTIÓN</title>
+</head>
+<body>
+<header class="top"><div><div class="eyebrow">COMPRA · VENTA · CONTROL</div><h1>EMANUEL <span>GESTIÓN</span></h1></div><button id="installBtn" class="outline" hidden>Instalar app</button></header>
+<nav id="nav" class="nav">
+<button data-page="inicio" class="active">Inicio</button><button data-page="vehiculos">Vehículos</button><button data-page="operaciones">Operaciones</button><button data-page="caja">Caja</button><button data-page="clientes">Clientes</button><button data-page="mercado">Mercado</button><button data-page="herramientas">Herramientas</button><button data-page="ajustes">Ajustes</button>
+</nav>
+<main>
+<section id="inicio" class="page active">
+<div class="welcome"><div><p class="eyebrow">PANEL GENERAL</p><h2>Tu negocio, bajo control.</h2><p class="muted">Tomá decisiones con números claros y cuidá tu capital.</p></div><span class="live">● DATOS LOCALES</span></div>
+<div class="cards four" id="stats"></div>
+<div class="grid2"><article class="panel"><div class="panelhead"><h3>Capital y actividad</h3><span class="muted">Resumen registrado</span></div><div id="capitalSummary"></div></article><article class="panel"><div class="panelhead"><h3>Alertas y pendientes</h3></div><div id="alerts"></div></article></div>
+<article class="panel"><div class="panelhead"><h3>Últimos movimientos</h3><button class="link" data-go="caja">Ver caja →</button></div><div id="recent"></div></article>
+</section>
+<section id="vehiculos" class="page">
+<div class="sectionhead"><div><p class="eyebrow">INVENTARIO</p><h2>Vehículos</h2><p class="muted">Cada unidad con su historia, costos y estado.</p></div><button class="primary" id="newVehicle">+ Agregar vehículo</button></div>
+<div class="toolbar"><input id="vehicleSearch" placeholder="Buscar por marca, modelo, año o patente"><select id="vehicleFilter"><option value="todos">Todos los estados</option><option>En stock</option><option>Señado</option><option>Vendido</option><option>En reparación</option></select></div><div id="vehicleList" class="cards two"></div>
+</section>
+<section id="operaciones" class="page">
+<div class="sectionhead"><div><p class="eyebrow">COMPRAS Y VENTAS</p><h2>Operaciones</h2><p class="muted">Registrá compras, ventas, permutas y cuotas.</p></div><button class="primary" id="newOperation">+ Nueva operación</button></div><div id="operationList"></div>
+</section>
+<section id="caja" class="page">
+<div class="sectionhead"><div><p class="eyebrow">FINANZAS</p><h2>Caja y movimientos</h2><p class="muted">Separá negocio, dinero personal y reserva.</p></div><button class="primary" id="newMovement">+ Movimiento</button></div>
+<div class="cards three" id="cashStats"></div><div class="toolbar"><select id="cashFilter"><option value="todos">Todas las cajas</option><option>Negocio</option><option>Personal</option><option>Reserva</option></select></div><div id="movementList"></div>
+</section>
+<section id="clientes" class="page">
+<div class="sectionhead"><div><p class="eyebrow">CONTACTOS Y SEGUIMIENTO</p><h2>Clientes y oportunidades</h2><p class="muted">No pierdas consultas ni compradores potenciales.</p></div><button class="primary" id="newClient">+ Agregar contacto</button></div><div id="clientList" class="cards two"></div>
+</section>
+<section id="mercado" class="page">
+<div class="sectionhead"><div><p class="eyebrow">SÁENZ PEÑA Y ALREDEDORES</p><h2>Análisis de mercado</h2></div></div>
+<article class="panel"><h3>Comparables de mercado</h3><p class="muted">Cargá publicaciones que encuentres en Marketplace, Mercado Libre u otras fuentes. La app calcula rangos y te ayuda a comparar. Los precios pedidos no equivalen necesariamente a precios de cierre.</p><button class="primary" id="newComparable">+ Cargar comparable</button><div id="comparableList"></div></article>
+<article class="panel"><h3>Fuentes y criterio</h3><p>Zona principal: Sáenz Peña, Chaco. Podés registrar también Quitilipi, Machagai, Villa Ángela, Campo Largo y Resistencia.</p><p class="muted">La primera versión no extrae anuncios automáticamente. No tiene acceso garantizado a Marketplace ni a bases privadas. Guardá el enlace y la fecha para mantener trazabilidad.</p></article>
+</section>
+<section id="herramientas" class="page">
+<div class="sectionhead"><div><p class="eyebrow">DECISIONES</p><h2>Herramientas comerciales</h2><p class="muted">Calculá antes de comprometer tu capital.</p></div></div>
+<div class="grid2">
+<article class="panel"><h3>Calculadora de compra</h3><label>Precio de compra ($)<input id="buyPrice" type="number" value="0"></label><label>Reparaciones ($)<input id="repairs" type="number" value="0"></label><label>Otros gastos ($)<input id="otherCosts" type="number" value="0"></label><label>Venta estimada ($)<input id="saleEstimate" type="number" value="0"></label><label>Ganancia mínima deseada ($)<input id="desiredProfit" type="number" value="0"></label><button class="primary" id="calcBuy">Calcular operación</button><div id="buyResult" class="result">Completá los valores y calculá.</div></article>
+<article class="panel"><h3>Calculadora de permuta</h3><label>Valor estimado de lo que entregás ($)<input id="tradeOut" type="number" value="0"></label><label>Valor estimado de lo que recibís ($)<input id="tradeIn" type="number" value="0"></label><label>Efectivo adicional que recibís ($)<input id="tradeCash" type="number" value="0"></label><button class="primary" id="calcTrade">Comparar permuta</button><div id="tradeResult" class="result">Compará valores antes de aceptar.</div></article>
+</div>
+<article class="panel"><h3>Checklist previo a comprar</h3><div class="checkgrid" id="checklist">
+<label><input type="checkbox"> Motor y pérdidas</label><label><input type="checkbox"> Caja y embrague</label><label><input type="checkbox"> Tren delantero / suspensión</label><label><input type="checkbox"> Chapa y pintura</label><label><input type="checkbox"> Cubiertas y frenos</label><label><input type="checkbox"> Prueba de manejo</label><label><input type="checkbox"> Cédula y título</label><label><input type="checkbox"> Informe de dominio / inhibiciones</label><label><input type="checkbox"> Deudas, multas y patentes</label><label><input type="checkbox"> Identificación de motor y chasis</label><label><input type="checkbox"> Costos de transferencia</label><label><input type="checkbox"> Salida comercial y margen</label>
+</div></article>
+</section>
+<section id="ajustes" class="page">
+<div class="sectionhead"><div><p class="eyebrow">CONFIGURACIÓN</p><h2>Ajustes y copias de seguridad</h2></div></div>
+<div class="grid2"><article class="panel"><h3>Preferencias del negocio</h3><label>Nombre comercial<input id="businessName" value="EMANUEL GESTIÓN"></label><label>Zona principal<input id="businessZone" value="Sáenz Peña, Chaco"></label><label>Ganancia mínima objetivo (%)<input id="targetMargin" type="number" value="15"></label><label>Reserva sugerida (%)<input id="reservePercent" type="number" value="10"></label><button class="primary" id="saveSettings">Guardar configuración</button></article>
+<article class="panel"><h3>Respaldo de información</h3><p class="muted">Exportá una copia completa para guardarla fuera del teléfono. Importar reemplaza los datos actuales: hacé primero una copia.</p><button class="primary" id="exportData">Exportar respaldo JSON</button><label class="file">Importar respaldo JSON<input id="importData" type="file" accept=".json,application/json"></label><button class="danger" id="clearData">Borrar todos los datos</button><p class="tiny">Tus datos de esta versión quedan guardados en este navegador/dispositivo. No se sincronizan automáticamente entre iPhone y PC.</p></article></div>
+<article class="panel"><h3>Reglas de seguridad</h3><ul><li>La app calcula y recomienda; vos autorizás compras, ventas, permutas y descuentos.</li><li>No mueve dinero ni firma documentos.</li><li>Verificá documentación y condiciones legales con profesionales/organismos correspondientes.</li><li>La garantía debe quedar escrita con alcance y condiciones claras.</li></ul></article>
+</section>
+</main>
+<dialog id="modal"><form method="dialog" id="modalForm"><div class="modalhead"><h3 id="modalTitle">Nuevo registro</h3><button class="x" value="cancel" aria-label="Cerrar">×</button></div><div id="modalBody"></div><div class="modalactions"><button class="outline" value="cancel">Cancelar</button><button class="primary" id="modalSave" value="default">Guardar</button></div></form></dialog>
+<footer>EMANUEL GESTIÓN <span>·</span> Tu negocio, bajo control.</footer>
+<script src="app.js"></script>
+</body></html>
