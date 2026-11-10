@@ -1,21 +1,14 @@
-EMANUEL GESTIÓN 2.0
+EMANUEL GESTIÓN — EDICIÓN INTEGRAL
 
-Incluye:
-- Panel general y semáforo orientativo de salud del negocio.
-- Inventario de vehículos, edición, costos de reparación e historial.
-- Registro de compras, ventas y permutas.
-- Finanzas con cajas Negocio, Personal y Reserva; transferencias internas separadas.
-- Cuotas por cobrar y pagar con vencimientos y registro de cobro/pago.
-- Clientes, vendedores, seguimiento y oportunidades.
-- Referencias de mercado y guardado de enlaces de anuncios.
-- Calculadoras de compra, permuta, margen y estrategia de negociación.
-- Checklist de inspección y generador de publicaciones.
-- Informes, impresión/guardar PDF, exportación JSON y CSV.
-- PWA instalable y modo offline básico.
+ARCHIVOS: index.html, styles.css, app.js, manifest.json, sw.js.
 
-IMPORTANTE:
-- Conserva los datos V1 usando la misma clave de almacenamiento local, pero exportá un respaldo antes de actualizar.
-- Los datos se guardan localmente en cada navegador/dispositivo; no hay sincronización automática iPhone-PC.
-- No consulta automáticamente Marketplace/Mercado Libre ni precios privados. Cargá fuentes, enlaces y fechas.
-- No realiza pagos, compras, ventas, transferencias bancarias ni firma contratos.
-- La rentabilidad y el semáforo son estimaciones basadas en los datos cargados.
+PUBLICACIÓN:
+1) Descomprimí el ZIP.
+2) En GitHub abrí el repositorio emanuel-gestion.
+3) Subí los cinco archivos y reemplazá los anteriores (index.html, styles.css, app.js, manifest.json, sw.js).
+4) Confirmá con Commit changes y esperá unos minutos a GitHub Pages.
+5) Abrí la web en Safari y recargá. El service worker nuevo limpia la caché anterior.
+
+MÓDULOS: panel; autos y motos; historial; compras/ventas/permutas; gastos/reparaciones; cajas negocio/personal/reserva; transferencias internas; cuotas y pagos parciales; contactos y seguimiento; referencias de mercado; oportunidades con enlaces; checklist mecánico/documental; garantías y reclamos; calculadora de compra; permuta; margen; negociación; generador de publicaciones; informes; ajustes; respaldo JSON/restauración y CSV.
+
+IMPORTANTE: los datos quedan guardados en el navegador/dispositivo actual. No hay sincronización nube iPhone-PC; para eso se necesita una base de datos y credenciales seguras. No se extraen anuncios automáticamente de Marketplace/Mercado Libre ni se inventan precios de venta cerrada. No realiza pagos, compras, ventas ni firmas automáticas. Respaldá los datos desde Ajustes.
